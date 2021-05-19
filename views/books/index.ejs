@@ -1,4 +1,4 @@
-<h2>Search Authors</h2>
+<h2>Search Books</h2>
 <form action="/books" method="GET">
     <div>
         <label for="">Title</label>
@@ -16,6 +16,8 @@
 </form>
 <div>
     <% books.forEach(book => { %>
-        <img height="150" width="100" src="<%= book.coverImagePath %> " alt="Book Cover">
+        <a href="/books/<%= book.id %>">
+            <img height="150" width="100" src="<%= book.coverImagePath %> " alt="Book Cover">
+        </a>
     <% }) %>  
 </div>
